@@ -1,0 +1,703 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WPide - File Manager & Code Editor\n"
+"POT-Creation-Date: 2022-12-02 16:33-0500\n"
+"PO-Revision-Date: 2022-06-15 11:02-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wpide.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: dist/js\n"
+"X-Poedit-SearchPath-1: App\n"
+"X-Poedit-SearchPath-2: _routes.php\n"
+"X-Poedit-SearchPath-3: _configuration.php\n"
+"X-Poedit-SearchPath-4: _services.php\n"
+"X-Poedit-SearchPath-5: wpide.php\n"
+"X-Poedit-SearchPath-6: _compat.php\n"
+"X-Poedit-SearchPath-7: ajax.php\n"
+"X-Poedit-SearchPathExcluded-0: src\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: deploy\n"
+"X-Poedit-SearchPathExcluded-3: dist/pixie\n"
+"X-Poedit-SearchPathExcluded-4: dist/pricing\n"
+
+#: dist/js/app.js:1 dist/js/chunks/Settings/Settings.js:1
+msgid "Settings"
+msgstr ""
+
+#: dist/js/app.js:1
+msgid "Skin"
+msgstr ""
+
+#: dist/js/app.js:1
+msgid "Nothing yet!"
+msgstr ""
+
+#: dist/js/app.js:1
+msgid "No Permissions"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+msgid "Data"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+msgid "Structure"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Find"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+msgid "Add field"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+msgid "Add row"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TablesTree.js:2
+msgid "Export table"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TablesTree.js:2
+msgid "Empty table"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TablesTree.js:2
+msgid "Drop table"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+msgid "No records found!"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#, javascript-format
+msgid "Delete selected (%s)"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TableRowForm.js:2
+msgid "READONLY"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TableRowForm.js:2
+msgid "PRIMARY"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TableRowForm.js:2
+msgid "AUTO INCREMENT"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TableRowForm.js:2
+msgid "False"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TableRowForm.js:2
+msgid "True"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TableRowForm.js:2
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Save"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TableRowForm.js:2
+msgid "Delete"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager-Table.js:2
+#: dist/js/chunks/DbManager/DbManager-TableRowForm.js:2
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Close"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager.js:2
+msgid "New Table"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager.js:2
+msgid "Export Database"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager.js:2
+#: dist/js/chunks/FileManager/FileManager-FilesPreview.js:2
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Close all tabs"
+msgstr ""
+
+#: dist/js/chunks/DbManager/DbManager.js:2
+msgid "Select a table"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Undo"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Redo"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Select all"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Select none"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Replace"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Enable replace"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Replace All"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Case sensitive"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Match whole word"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Regular Expression"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Find previous occurence"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Find next occurence"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+#: dist/js/chunks/FileManager/FileManager-ImageEditor.js:2
+msgid "Saved"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Function"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "optional"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "Returns"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "PHP manual"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "WordPress codex"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Editor.js:2
+msgid "`.replaceAll` does not allow non-global regexes"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-FilesItemActions.js:1
+#: dist/js/chunks/FileManager/FileManager-FilesList.js:1
+#: dist/js/chunks/FileManager/FileManager-FilesListItem.js:1
+#: dist/js/chunks/FileManager/FileManager-GridView.js:1
+#: dist/js/chunks/FileManager/FileManager-GroupView.js:1
+#: dist/js/chunks/FileManager/FileManager-ListView.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+#, javascript-format
+msgid "%d items"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-FilesItemActions.js:1
+#: dist/js/chunks/FileManager/FileManager-FilesList.js:1
+#: dist/js/chunks/FileManager/FileManager-FilesListItem.js:1
+#: dist/js/chunks/FileManager/FileManager-GridView.js:1
+#: dist/js/chunks/FileManager/FileManager-GroupView.js:1
+#: dist/js/chunks/FileManager/FileManager-ListView.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+#, javascript-format
+msgid "%d item"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-FilesList.js:1
+#: dist/js/chunks/FileManager/FileManager-FilesListItem.js:1
+#: dist/js/chunks/FileManager/FileManager-GridView.js:1
+#: dist/js/chunks/FileManager/FileManager-GroupView.js:1
+#: dist/js/chunks/FileManager/FileManager-ListView.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Calc size"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-FilesPreview.js:2
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Minimize"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-FilesPreview.js:2
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Select a file"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Gallery.js:7
+msgid "Edit image"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-ListView.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Bulk actions"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-ListView.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Name"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-ListView.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Folder"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-ListView.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Last opened"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-ListView.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Size"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Upload.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+#, javascript-format
+msgid "Uploading files %s of %s"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Upload.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Upload paused."
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager-Upload.js:1
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Upload done!"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Search within this folder"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+#, javascript-format
+msgid "%s results found."
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Resume"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Stop"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Create"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Create file"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Create folder"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Add files"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Search for"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Drop files to upload"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Cancel"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Empty folder"
+msgstr ""
+
+#: dist/js/chunks/FileManager/FileManager.js:2
+msgid "Cannot convert a Symbol value to a number"
+msgstr ""
+
+#: dist/js/chunks/NotFound/NotFound.js:1
+msgid "Oops! Why you’re here?"
+msgstr ""
+
+#: dist/js/chunks/NotFound/NotFound.js:1
+msgid ""
+"We are very sorry for inconvenience. It looks like you’re trying to access a "
+"section that either has been deleted or never existed."
+msgstr ""
+
+#: dist/js/chunks/NotFound/NotFound.js:1
+msgid "Back to dashboard"
+msgstr ""
+
+#: dist/js/chunks/Premium/Premium.js:1
+msgid "Premium Version Required!"
+msgstr ""
+
+#: dist/js/chunks/Premium/Premium.js:1
+msgid ""
+"It looks like you’re trying to access a section that requires the Premium "
+"Version."
+msgstr ""
+
+#: dist/js/chunks/Premium/Premium.js:1
+msgid "Unlock Access"
+msgstr ""
+
+#: dist/js/chunks/Premium/Premium.js:1
+msgid "More info"
+msgstr ""
+
+#: dist/js/chunks/chunk-vendors.js:2
+msgid "Unhandled promise rejection"
+msgstr ""
+
+#: App/App.php:225 App/App.php:226
+msgid "File Manager"
+msgstr ""
+
+#: App/App.php:235 App/App.php:236
+msgid "File Editor"
+msgstr ""
+
+#: App/App.php:245 App/App.php:246
+msgid "DB Manager"
+msgstr ""
+
+#: App/App.php:346
+msgid "Restricted Access"
+msgstr ""
+
+#: App/Classes/ReviewNotice.php:164
+#, php-format
+msgid ""
+"Hey %s, I noticed you've been using %s for the past %s – that’s awesome!"
+msgstr ""
+
+#: App/Classes/ReviewNotice.php:166
+#, php-format
+msgid ""
+"Could you please do me a %1$sBIG favor%2$s and give it a %1$s5-star rating"
+"%2$s on WordPress? Just to %1$s help us%2$s spread the word and boost our "
+"motivation. Many thanks!"
+msgstr ""
+
+#: App/Classes/ReviewNotice.php:171
+msgid "Ok, you deserve it"
+msgstr ""
+
+#: App/Classes/ReviewNotice.php:172
+msgid "Nope, maybe later"
+msgstr ""
+
+#: App/Classes/ReviewNotice.php:173
+msgid "I already did"
+msgstr ""
+
+#: App/Classes/ReviewNotice.php:174
+msgid "Help me first"
+msgstr ""
+
+#: App/Controllers/DbManager/DatabaseController.php:72
+#: App/Controllers/DbManager/DatabaseController.php:94
+#: App/Controllers/DbManager/DatabaseController.php:121
+#: App/Controllers/DbManager/DatabaseController.php:155
+#: App/Controllers/DbManager/DatabaseController.php:184
+#: App/Controllers/DbManager/DatabaseController.php:209
+#: App/Controllers/DbManager/DatabaseController.php:233
+#: App/Controllers/DbManager/DatabaseController.php:258
+msgid "Missing table name!"
+msgstr ""
+
+#: App/Controllers/DbManager/DatabaseController.php:159
+msgid "Missing primary key value(s)!"
+msgstr ""
+
+#: App/Controllers/FileManager/DownloadController.php:69
+msgid "Requested file does not exist"
+msgstr ""
+
+#: App/Controllers/FileManager/FileController.php:137
+#, php-format
+msgid "%s name cannot be empty!"
+msgstr ""
+
+#: App/Controllers/FileManager/FileController.php:294
+msgid "Failed file backup!"
+msgstr ""
+
+#: App/Controllers/FileManager/FileController.php:301
+msgid "Failed saving image state!"
+msgstr ""
+
+#: App/Controllers/FileManager/FileController.php:307
+msgid "Failed saving file!"
+msgstr ""
+
+#: App/Services/Database/Database.php:492
+#: App/Services/Database/Database.php:575
+msgid ""
+"Table PRIMARY KEY must be defined! You can do so within the structure view."
+msgstr ""
+
+#: App/Services/Database/Database.php:498
+msgid "Primary key value cannot be empty!"
+msgstr ""
+
+#: App/Services/Database/Database.php:519
+#, php-format
+msgid "Column \"%s\" value should be numeric!"
+msgstr ""
+
+#: App/Services/Database/Database.php:526
+#, php-format
+msgid "Column \"%s\" value should be of type string!"
+msgstr ""
+
+#: App/Services/Database/Database.php:602
+msgid "Field name cannot be empty!"
+msgstr ""
+
+#: App/Services/Database/Database.php:669
+msgid ""
+"A PRIMARY KEY is required! Before changing the INDEX type, set another field "
+"as PRIMARY."
+msgstr ""
+
+#: App/Services/Database/Database.php:710
+msgid ""
+"A PRIMARY KEY is required! Before deleting a PRIMARY field, set another "
+"field as PRIMARY."
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:16
+msgid "Field Name"
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:21
+msgid "Data Type"
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:91
+msgid "Length/Values"
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:96
+msgid "Default Value"
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:107
+msgid "Index Type"
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:111
+msgid "Select Index"
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:118
+msgid "Is Nullable"
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:123
+msgid "Auto Increment"
+msgstr ""
+
+#: App/Services/Database/Traits/DatabaseSchema.php:128
+msgid "Comments"
+msgstr ""
+
+#: App/Services/View/Adapters/Vuejs.php:91
+msgid "Upgrade"
+msgstr ""
+
+#: App/Services/View/Adapters/Vuejs.php:101
+msgid "Account"
+msgstr ""
+
+#: App/Services/View/Adapters/Vuejs.php:110
+msgid "Opt In"
+msgstr ""
+
+#: App/Services/View/Adapters/Vuejs.php:120
+msgid "Affiliates"
+msgstr ""
+
+#: App/Services/View/Adapters/Vuejs.php:128
+msgid "Support"
+msgstr ""
+
+#: _configuration.php:10
+msgid "Dark Mode"
+msgstr ""
+
+#: _configuration.php:15
+msgid "Theme"
+msgstr ""
+
+#: _configuration.php:30
+msgid "Root Path"
+msgstr ""
+
+#: _configuration.php:35
+msgid "Override on upload"
+msgstr ""
+
+#: _configuration.php:40
+msgid "Calculate folder size"
+msgstr ""
+
+#: _configuration.php:41
+msgid "Folder size will be cached for faster load on subsequent requests."
+msgstr ""
+
+#: _configuration.php:43
+msgid "On Demand"
+msgstr ""
+
+#: _configuration.php:44
+msgid "On load"
+msgstr ""
+
+#: _configuration.php:45
+msgid "Disabled"
+msgstr ""
+
+#: _configuration.php:51
+msgid "Backups max days"
+msgstr ""
+
+#: _configuration.php:52
+msgid "Remove backup folders older than X days"
+msgstr ""
+
+#: _configuration.php:57
+msgid "Max upload size (MB)"
+msgstr ""
+
+#: _configuration.php:62
+msgid "Upload chunk size (MB)"
+msgstr ""
+
+#: _configuration.php:67
+msgid "Simultaneous uploads"
+msgstr ""
+
+#: _configuration.php:72
+msgid "Default archive name"
+msgstr ""
+
+#: _configuration.php:79
+msgid "Editable files"
+msgstr ""
+
+#: _configuration.php:100
+msgid "Auto play media files, when possible."
+msgstr ""
+
+#: _configuration.php:101
+msgid ""
+"Chromium browsers do not allow autoplay, unless user interaction is detected "
+"on the page."
+msgstr ""
+
+#: _configuration.php:106
+msgid "Simultaneous search"
+msgstr ""
+
+#: _configuration.php:112
+msgid "Entries filter"
+msgstr ""
+
+#: _configuration.php:113
+msgid ""
+"Enter partial or full path. To exclude folders, add a trailing slash. Note: "
+"WordPress core files as well as important WPide folders and files are hidden "
+"automatically."
+msgstr ""
+
+#: _configuration.php:131
+msgid "Items per page default"
+msgstr ""
+
+#: wpide.php:42
+#, php-format
+msgid ""
+"%s minimum PHP version requirement is %s. The current PHP version is: %s. "
+"Either update the PHP version, or use %s %s or below."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WPIDE - File Manager & Code Editor"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpide.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"WordPress file manager with an advanced code editor / file editor featuring "
+"auto-completion of both WordPress and PHP functions with reference, syntax "
+"highlighting, line numbers, tabbed editing, automatic backup, image editor & "
+"much more!"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "XplodedThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://xplodedthemes.com"
+msgstr ""

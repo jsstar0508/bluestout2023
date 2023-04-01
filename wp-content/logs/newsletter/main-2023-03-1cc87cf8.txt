@@ -1,0 +1,4 @@
+06-03-2023 22:27:00 - ERROR - 7.6.6 - 44.3 MB/512 MB - admin > cURL error 28: Connection timed out after 5007 milliseconds (http_request_failed) - 
+06-03-2023 23:18:09 - ERROR - 7.6.6 - 46.0 MB/512 MB - admin > Invalid address:  (From): newsletter@localhost (1) - 
+09-03-2023 23:25:19 - ERROR - 7.6.6 - 42.3 MB/512 MB - admin > cURL error 28: Connection timed out after 5012 milliseconds (http_request_failed) - 
+13-03-2023 20:00:42 - ERROR - 7.6.6 - 44.1 MB/512 MB - [cron] > cURL error 28: Connection timed out after 5004 milliseconds (http_request_failed) - 

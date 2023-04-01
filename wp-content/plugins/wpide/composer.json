@@ -1,0 +1,63 @@
+{
+    "name": "wpide/wpide",
+    "description": "WP IDE",
+    "license": "GPL-2.0",
+    "type": "project",
+    "config": {
+        "platform": {
+            "php": "7.4.0"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true,
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true,
+            "phpro/grumphp": true
+        }
+    },
+    "require": {
+        "php": "^7.4.0",
+        "ext-dom": "*",
+        "ext-fileinfo": "*",
+        "ext-json": "*",
+        "adbario/php-dot-notation": "^3.1",
+        "composer/installers": "~1.0",
+        "ifsnop/mysqldump-php": "^2.9",
+        "league/flysystem": "^1.1.9",
+        "league/flysystem-ziparchive": "^1.0",
+        "league/mime-type-detection": "^1.11",
+        "monolog/monolog": "^1.24",
+        "nikic/fast-route": "^1.3",
+        "nikic/php-parser": "^4.13",
+        "php-di/php-di": "^6.4.0",
+        "rakit/validation": "^1.1",
+        "symfony/http-foundation": "^4.4"
+    },
+    "replace": {
+        "symfony/polyfill-mbstring": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-intl-idn": "*",
+        "symfony/polyfill-intl-normalizer": "*",
+        "symfony/polyfill-intl-normalizer": "*"
+    },
+    "authors": [
+        {
+            "name": "Georges Haddad",
+            "email": "prismosoft@gmail.com"
+        }
+    ],
+    "autoload": {
+        "exclude-from-classmap": ["/deploy/", "/freemius/"],
+        "files": [
+            "_constants.php",
+            "_compat.php",
+            "wp-content/fatal-error-handler.php"
+        ],
+        "psr-4": {
+            "WPIDE\\": ""
+        }
+    }
+}

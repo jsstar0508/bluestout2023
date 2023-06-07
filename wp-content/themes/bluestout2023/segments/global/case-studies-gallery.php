@@ -18,14 +18,15 @@
       <div class="gallery-item fadeInBottom-'.($index % 4 + 1).'">
         <div class="gallery-item-link">
           <div class="gallery-bg" style="background-image: url('.adjust_photo($post_photo_url).')"> </div>
-          <div class="gallery-logo"><img class="" src="'.$post_dark_logo_url.'" alt="'.$post_dark_logo_url.'"/></div>
+          <div class="gallery-logo"><img class="" src="'.$post_dark_logo_url.'" alt="'.get_image_alt_from_image_url($post_dark_logo_url).'"/></div>
           <div class="gallery-hover-layer text-center">
             <p class="hover-text xs-title white-color">'.$post_hover_text.'</p>
             <a href="'.$post_url.'" class="btn-view-case-study blue-button-hover xs-content">VIEW CASE STUDY</a>
             <div class="hover-logo text-center">
-              <img src="'.$post_white_logo_url.'" alt="'.$post_white_logo_url.'"/>
+              <img src="'.$post_white_logo_url.'" alt="'.get_image_alt_from_image_url($post_white_logo_url).'"/>
             </div>
           </div>
+          <a href="'.$post_url.'" class="gallery-item-link-to" data-c="'.$post_hover_text.'" aria-label="'.$post_hover_text.'"></a>
         </div>
       </div>
     </div>

@@ -197,6 +197,10 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 19px 92px 18px 95px;
 }
 
+small {
+  font-size: .6em !important;
+}
+
 input:focus {
   outline: none;
 }
@@ -214,7 +218,7 @@ blockquote {
 
 .page-hero {
   margin-top: 30px;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .col-xs-7ths {
@@ -533,6 +537,7 @@ blockquote {
 .gform_wrapper form {
   display: flex !important;
   justify-content: center !important;
+  position: relative !important;
 }
 
 .gform_wrapper div.validation_error {
@@ -579,6 +584,55 @@ blockquote {
 
 .gform_wrapper input[type='submit']:hover {
   background: rgb(0 48 78) !important;
+}
+
+.gform_wrapper .gform-confirmed {
+  position: relative;
+}
+
+.gform_wrapper .gform-confirmed .icon-gform-confirmed {
+  position: absolute;
+  left: calc(50% - 30px);
+  top: 9px;
+  width: 27px !important;
+  height: auto !important;
+}
+
+#home #hero .gform_wrapper .gform-confirmed input[type="submit"] {
+  padding-left: 76px !important;
+  padding-right: 36px !important;
+}
+
+#overlay {
+	background: #000;
+	background: rgba(0, 0, 0, 0.3);
+	display: block;
+	float: left;
+	height: 100%;
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+#gform-notification {
+	background: #fff;
+	border-radius: 10px;
+	display: block;
+	margin: auto;
+	max-height: 237px;
+	max-width: 520px;
+	padding: 61px;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	text-align: center;
+	width: 100%;
+	z-index: 101;
+}
+
+#gform-notification .button {
+	margin: 20px 0 0;
+	padding: 12px 24px;
 }
 
 .case-studies-gallery {
@@ -642,6 +696,15 @@ blockquote {
   height: 100%;
   display: block;
   cursor: pointer;
+  position: relative;
+}
+.case-studies-gallery .case-studies-inner .gallery-item .gallery-item-link .gallery-item-link-to {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 .case-studies-gallery .case-studies-inner .gallery-item .gallery-bg {
   background-size: cover;
@@ -663,6 +726,7 @@ blockquote {
   display: inline-block;
   margin-top: 30px;
   font-weight: 500;
+  z-index: 2;
 }
 .case-studies-gallery .case-studies-inner .gallery-hover-layer .hover-text{
   width: 474px;
@@ -961,6 +1025,10 @@ blockquote {
     margin-top: 20px;
   }
 
+  .page-hero {
+    padding-top: 60px;
+  }
+
   .case-studies-gallery .case-studies-inner .gallery {
     margin-top: 20px;
   }
@@ -978,15 +1046,7 @@ blockquote {
     font-size: 22px;
   }
   .case-studies-gallery .case-studies-inner .btn-view-case-study {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    margin: 0px !important;
-    color: transparent !important;
-    padding: 0px !important;
-    background: transparent !important;
+    display: none;
   }
   .case-studies-gallery .case-studies-inner .btn-view-case-study:hover, .case-studies-gallery .case-studies-inner .btn-view-case-study:focus {
     background: transparent !important;
@@ -999,7 +1059,6 @@ blockquote {
   }
   .case-studies-gallery .case-studies-inner .gallery-hover-layer .hover-logo img{
     max-width: 145px;
-    max-height: 30px;
   }
   .case-studies-gallery .case-studies-inner > .title h2{
     font-size: 26px;
@@ -1075,10 +1134,64 @@ blockquote {
   .btn-big {
     width: calc(100% - 40px);
   }
+
+  .gform_wrapper .gform-confirmed .icon-gform-confirmed {
+    left: calc(50% - 40px);
+  }
 }
 
 @media (max-width: 450px) {
   .case-studies-gallery .case-studies-inner .gallery-item {
     height: 275px;
+  }
+}
+
+.message-popup {
+  background: white;
+  box-shadow: 0px 0px 14px rgba(84, 103, 115, 0.15);
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message-popup .main-content {
+  display: flex;
+  align-items: center;
+}
+
+.message-popup .main-content .content {
+  padding-left: 15px;
+}
+
+.message-popup .main-content .content .confirm-title {
+  color: black;
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.message-popup .main-content .content .confirm-message {
+  color: #8E9AA3;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.message-popup .close img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 575px) {
+  .message-popup .main-content .content .confirm-title {
+    text-align: center;
+  }
+  
+  .message-popup .close img {
+    position: absolute;
+    right: 10px;
+    top: 10px;
   }
 }

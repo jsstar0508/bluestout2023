@@ -16,10 +16,11 @@
     'cat' => $category_id,
   ];
 
-  if($sort_key == 'post_modified') {
+  if($sort_key == 'publish_date') {
     $args['orderby'] = $sort_key;
     unset($args['meta_key']);
   }
+
   $post_list = new WP_query($args);
   $rest_posts_count = $post_list->found_posts - count($post_list->posts);
 ?>

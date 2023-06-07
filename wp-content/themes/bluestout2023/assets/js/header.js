@@ -1,13 +1,32 @@
 $(function() {
   function changeHeader(){
-    var header = $('#main_header.home');
+    var main_header = $('#main_header');
+    var top_header = $('#top-header');
+    var header_section = $('.header-section');
+    var lastScrollTop = 0, delta = 5;
 
-    $(window).scroll(function(){
+    $(window).scroll(function(e) {
       if ($(window).scrollTop() > 5){
-        header.addClass('scrolled');
+        main_header.addClass('scrolled');
+        top_header.addClass('scrolled');
       } else {
-        header.removeClass('scrolled');
+        main_header.removeClass('scrolled');
+        top_header.removeClass('scrolled');
       }
+
+      var nowScrollTop = $(this).scrollTop();
+      if(Math.abs(lastScrollTop - nowScrollTop) >= delta) {
+        if (nowScrollTop < lastScrollTop){
+          header_section.removeClass('scrolled');
+        } else {
+          if ($(window).scrollTop() > 300){
+            header_section.addClass('scrolled');
+          } else {
+            header_section.removeClass('scrolled');
+          }
+        }
+      }
+      lastScrollTop = $(this).scrollTop();
     });
   }
   changeHeader();

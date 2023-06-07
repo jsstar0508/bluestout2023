@@ -20,10 +20,10 @@
                 <div class="video no-overlay-background">
                   <div class="image" style="background-image:url(\''.$video_image.'\')">
                   </div>
-                  <div class="video-hover-layout">
+                  <div class="video-hover-layout" data-channel="custom">
                     <div class="video-hover-inner">
-                      <span class="img-wrapper hover-point btn-video-play" data-channel="custom" src="'.$video_url.'">
-                        <img src="'.get_template_directory_uri().'/assets/img/video-play.png">
+                      <span class="img-wrapper hover-point btn-video-play" src="'.$video_url.'">
+                        <img src="'.get_template_directory_uri().'/assets/img/video-play.png" alt="video-play">
                       </span>
                     </div>
                   </div>

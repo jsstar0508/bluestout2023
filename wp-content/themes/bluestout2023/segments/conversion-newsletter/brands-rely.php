@@ -15,7 +15,7 @@
             foreach ($brands_rely_images as $image) {
               $html = '<div class="col-md-7ths col-sm-3 col-4">';
               $html .= '<div class="brands-item">';
-              $html .= '<img src="'.$image['image'].'">';
+              $html .= '<img src="'.$image['image'].'" alt="'.get_image_alt_from_image_url($image['image']).'">';
               $html .= '</div>';
               $html .= '</div>';
               echo $html;

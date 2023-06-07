@@ -14,10 +14,10 @@ foreach($post_list as $post) {
       <a href="<?=$post_url?>">
         <div class="cro-winner-item-content">
           <div class="title text-center">
-            <h4 class="md-content dark-color"><?=$post_big_title?></h4>
+            <h4 class="md-content dark-color"><?=adjust_text($post_big_title, 100)?></h4>
           </div>
           <div class="image">
-            <img src="<?=$post_photo_url;?>" alt="<?=$post_photo_url;?>">
+            <img src="<?=$post_photo_url;?>" alt="<?=get_image_alt_from_image_url($post_photo_url);?>">
           </div>
         </div>
       </a>

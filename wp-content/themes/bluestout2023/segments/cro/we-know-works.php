@@ -20,7 +20,7 @@
                 <div class="gallery-item text-center">
                   <div class="image">
                     <div class="image-inner">
-                      <img src="'.$image.'" alt="'.$image.' /">
+                      <img src="'.$image.'" alt="'.get_image_alt_from_image_url($image).' /">
                     </div>
                   </div>
                   <div class="title">
@@ -46,7 +46,7 @@
               <div class="gallery-item text-center fadeInBottom">
                 <div class="image">
                   <div class="image-inner">
-                    <img src="'.$image.'" alt="'.$image.'" />
+                    <img src="'.$image.'" alt="'.get_image_alt_from_image_url($image).'" />
                   </div>
                 </div>
                 <div class="title">

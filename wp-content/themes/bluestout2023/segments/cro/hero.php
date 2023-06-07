@@ -3,9 +3,9 @@
   $hero_big_title = get_field('hero_big_title');
   $hero_text = get_field('hero_text');
   $hero_text = str_replace(chr(0x0d), '<br>', $hero_text);
-  $hero_video = get_field('hero_video');
-  $hero_video_image = get_field('hero_video_image');
-  $hero_video_hover_text = get_field('hero_video_hover_text');
+  // $hero_video = get_field('hero_video');
+  // $hero_video_image = get_field('hero_video_image');
+  // $hero_video_hover_text = get_field('hero_video_hover_text');
 ?>
 
 <section id="hero" class="page-hero">
@@ -13,7 +13,7 @@
     <div class="hero-inner">
       <div class="title fadeInBottom-1">
         <div class="row">
-          <div class="col-md-10">
+          <div class="col-lg-10">
             <div class="small-title lg-content gray-color">
               <p class=""><?=$hero_small_title?></p>
             </div>
@@ -25,7 +25,10 @@
       </div>
       <div class="row content">
         <div class="col-lg-6">
-          <div class="video fadeInBottom-4">
+          <div class="graphic-placeholder fadeInBottom-4 text-center">
+            <?get_template_part('assets/img/cro-graphic');?>
+          </div>
+          <!-- <div class="video fadeInBottom-4">
             <div class="image" style="background-image:url('<?=$hero_video_image?>')">
             </div>
             <div class="video-hover-layout">
@@ -36,7 +39,7 @@
                 </span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="col-lg-6">
           <div class="content-text xg-content fadeInBottom-2">
@@ -52,7 +55,7 @@
         </div>
         <div class="col-lg-6 col-12">
           <div class="trusted-text-wrapper">
-            <p class="trusted-text xxs-content">TRUSTED PARTER OF <img src="<?=bloginfo('template_url');?>/assets/img/logo/logo-shopify-dark.png"></p>
+            <p class="trusted-text xxs-content">TRUSTED PARTER OF <img src="<?=bloginfo('template_url');?>/assets/img/logo/logo-shopify-dark.png" alt="shopify-plus"></p>
           </div>
         </div>
       </div>

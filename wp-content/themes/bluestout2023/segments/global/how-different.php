@@ -21,10 +21,10 @@
 							<div class="desc-item-inner fadeInBottom-'.($index + 1).'"">
 								<div class="head-wrapper">
 									<div class="image">
-										<img src="'.$icon.'" alt="'.$icon.'" alt="'.$title_image.'"/>
+										<img src="'.$icon.'" alt="'.get_image_alt_from_image_url($title_image).'"/>
 									</div>
 									<div class="title lg-content">
-									'.($title !== '' ? ('<p>'.$title.'</p>') : ('<img src="'.$title_image.'" alt="'.$title_image.'">') ).'
+									'.($title !== '' ? ('<p>'.$title.'</p>') : ('<img src="'.$title_image.'" alt="'.get_image_alt_from_image_url($title_image).'">') ).'
 									</div>
 								</div>
 								<div class="content smd-content">
@@ -51,10 +51,10 @@
 						<div class="desc-item-inner fadeInBottom">
 							<div class="head-wrapper">
 								<div class="image">
-									<img src="'.$icon.'" alt="'.$icon.'"/>
+									<img src="'.$icon.'" alt="'.get_image_alt_from_image_url($icon).'"/>
 								</div>
 								<div class="title lg-content">
-								'.($title !== '' ? ('<p>'.$title.'</p>') : ('<img src="'.$title_image.'" alt="'.$title_image.'">') ).'
+								'.($title !== '' ? ('<p>'.$title.'</p>') : ('<img src="'.$title_image.'" alt="'.get_image_alt_from_image_url($title_image).'">') ).'
 								</div>
 							</div>
 							<div class="content smd-content">

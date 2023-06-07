@@ -1,5 +1,6 @@
 <?
 	$page_url = get_the_permalink();
+	$top_header_text = get_field('top_header_text', 'option');
 	$menu_list = get_field('header_menu_list', 'option');
 	$body_id = isset($args['body_id']) ? $args['body_id'] : '';
 	$body_class = isset($args['body_class']) ? $args['body_class'] : '';
@@ -25,6 +26,7 @@
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/jquery-nice-select-1.1.0/css/style.css">
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/animation-wait-me/waitMe.css">
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/main.css">
+	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/components/marquee.css">
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/components/header.css">
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/components/footer.css">
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/components/quote-box.css">
@@ -44,9 +46,9 @@
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/blog-post.css">
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/blog-home.css">
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/cro-winners.css">
-
+	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/newsletter-confirmation.css">
+	<!-- <link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/css/pixel.css?ver=1"> -->
 	<link rel="stylesheet" href="<?=bloginfo('template_url');?>/assets/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,500,700,|Montserrat:400,700" rel="stylesheet"> -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -89,20 +91,39 @@
 		/></noscript>
 	<!-- End Facebook Pixel Code [DUPLICATE] -->
 
-	<!-- <meta name="blogcatalog" content="9BC10972940" />
+	<meta name="blogcatalog" content="9BC10972940" />
 	<meta name="google-site-verification" content="mVTSu6fxqz_sh1mABb5yCI8F-m7-CI8mAi4ekRaFTgs" />
-	<script type="text/javascript" charset="utf-8">var ju_num="8B388611-029F-400E-9E9C-6A4516BB7A7A";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://cdn.justuno.com/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script> -->
-  <!-- ManyChat -->
-  <!-- <script type="text/javascript" async="async" src="//widget.manychat.com/368231686957124.js" async="async"></script> -->
-	<!-- <script data-cfasync="false">window.ju_num="8B388611-029F-400E-9E9C-6A4516BB7A7A";window.asset_host='//cdn.jst.ai/';(function(i,s,o,g,r,a,m){i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script',asset_host+'vck.js','juapp');</script> -->
+	<script type="text/javascript" charset="utf-8">var ju_num="8B388611-029F-400E-9E9C-6A4516BB7A7A";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://cdn.justuno.com/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
+	<!-- ManyChat -->
+	<!-- <script type="text/javascript" async="async" src="//widget.manychat.com/368231686957124.js" async="async"></script> -->
+	<script data-cfasync="false">window.ju_num="8B388611-029F-400E-9E9C-6A4516BB7A7A";window.asset_host='//cdn.jst.ai/';(function(i,s,o,g,r,a,m){i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script',asset_host+'vck.js','juapp');</script>
 </head>
 
-<body id="<?=$body_id?>" <?php body_class(isset($body_class)); ?>>
+<body id="<?=$body_id?>" <?php body_class(isset($body_class) ? $body_class : ''); ?>>
 <div class="header-section">
 	<div id="top-header">
-		<p class="sm-content text-center sm-content">Get on the waitlist for Audits and save 15% at launch</p>
+		<div class="d-none d-sm-block">
+			<p class="sm-content text-center sm-content"><?=$top_header_text?></p>
+		</div>
+		<div class="d-xs-block d-sm-none">
+			<div class="marquee-wrap">
+				<div class="marquee marquee_hoverpause" style="--duration: 100s;   transform: skewY(-0deg);">
+					<div class="marquee__group">
+						<p class="sm-content text-center sm-content"><?=$top_header_text?></p>
+						<p class="sm-content text-center sm-content" aria-hidden="true"><?=$top_header_text?></p>
+						<p class="sm-content text-center sm-content" aria-hidden="true"><?=$top_header_text?></p>
+					</div>
+					
+					<div aria-hidden="true" class="marquee__group">
+						<p class="sm-content text-center sm-content"><?=$top_header_text?></p>
+						<p class="sm-content text-center sm-content"><?=$top_header_text?></p>
+						<p class="sm-content text-center sm-content"><?=$top_header_text?></p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<header id="main_header" class="<?=$header_class?> <?php echo is_front_page() ? 'home' : 'scrolled' ?>">
+	<header id="main_header" class="<?=$header_class?> <?php echo is_front_page() ? 'home' : '' ?>">
 		<div class="header-bg">
 			<div class="header-top-left-bg"></div>
 			<div class="header-cross-line-bg"></div>
@@ -113,9 +134,13 @@
 					<div class="menu d-flex justify-content-between">
 						<div class="logo">
 							<div class="logo-icon">
-								<a href="<?=get_full_url( '/' )?>">
-									<div class="non-scrolled"><?get_template_part('assets/img/logo/logo-white');?></div>
-									<div class="scrolled"><?get_template_part('assets/img/logo/logo-dark');?></div>
+								<a href="<?=get_full_url( '/' )?>" data-c="bluestout-logo" aria-label="bluestout-logo">
+									<? if(is_front_page()) { ?>
+										<div class="non-scrolled"><?get_template_part('assets/img/logo/logo-white');?></div>
+										<div class="scrolled"><?get_template_part('assets/img/logo/logo-dark');?></div>
+									<? } else { ?>
+										<div class=""><?get_template_part('assets/img/logo/logo-dark');?></div>
+									<? } ?>
 								</a>
 							</div>
 						</div>
@@ -148,7 +173,7 @@
 													<? } ?>
 													<? if($menu_index == 0) { ?>
 														<div class="trusted-text-wrapper text-center">
-																<p class="trusted-text xsx-content">TRUSTED PARTER OF &nbsp; <img src="<?=bloginfo('template_url');?>/assets/img/logo/logo-shopify-dark.png" alt="Shopify"></p>
+															<p class="trusted-text xsx-content">TRUSTED PARTER OF &nbsp; <img src="<?=bloginfo('template_url');?>/assets/img/logo/logo-shopify-dark.png" alt="Shopify"></p>
 														</div>
 													<? } ?>
 												</ul>

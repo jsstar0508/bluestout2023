@@ -1,5 +1,5 @@
 <?
-define('CATAGORY_SLGU_CASE_STUDY', 'case-study');
+define('CATAGORY_SLGU_CASE_STUDY', 'case-studies');
 define('CATAGORY_SLGU_CRO_WINNER', 'cro-wins');
 define('CATAGORY_SLGU_NEWSLETTER', 'newsletter');
 

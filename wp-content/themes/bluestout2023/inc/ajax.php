@@ -6,7 +6,7 @@ function bluestout_ajaxurl() { ?>
   </script>
 <?}
 
-//blog post ajax pagination
+//case studies ajax pagination
 function get_more_case_studies() {
   $paged = $_REQUEST['paged'];
   $category_id = isset($_REQUEST['category_id']) ? $_REQUEST['category_id'] : '';
@@ -43,7 +43,7 @@ add_action( 'wp_ajax_get_more_case_studies', 'get_more_case_studies' );
 add_action( 'wp_ajax_nopriv_get_more_case_studies', 'get_more_case_studies' );
 
 
-
+//blog post ajax pagination
 function get_more_posts() {
   $paged = $_REQUEST['paged'];
   $category_id = isset($_REQUEST['category_id']) ? $_REQUEST['category_id'] : '';
@@ -51,6 +51,7 @@ function get_more_posts() {
   $page_data = get_page_by_path('blog/');
   $page_id = $page_data->ID;
   $posts_per_page = get_field('post_gallery_posts_per_page', $page_id);
+  $post_gallery_display_categories = get_field('post_gallery_display_categories', $page_id);
 
   if ( $paged) {
     $args = [
@@ -58,11 +59,20 @@ function get_more_posts() {
       'posts_per_page' => $posts_per_page,
       'paged' => $paged,
       'post_status' => array( 'publish' ),
-      'orderby' => 'post_modified',
+      'orderby' => 'publish_date',
       'order' => 'DESC',
     ];
 
-    if($category_id != '') $args['cat'] = $category_id;
+    if($category_id === '-1') {
+      $args['category__not_in'] = $post_gallery_display_categories;
+    } else if($category_id != '') {
+      $args['cat'] = $category_id;
+    }
+
+    if($sort_key == 'publish_date') {
+      $args['orderby'] = $sort_key;
+      unset($args['meta_key']);
+    }
 
     $post_list = new WP_query($args);
     if($post_list->posts) {
@@ -107,11 +117,11 @@ function get_cro_winners_gallery() {
     if($category_id != '') $args['cat'] = $category_id;
 
     $meta_query = ['relation' => 'AND'];
-    if($param_page_type != '') $meta_query[] = ['key' => 'page_type', 'value' => $param_page_type];
-    if($param_industry != '') $meta_query[] = ['key' => 'industry', 'value' => $param_industry];
-    if($param_metric != '') $meta_query[] = ['key' => 'metric', 'value' => $param_metric];
+    if($param_page_type != '') $meta_query[] = ['key' => 'page_type', 'value' => $param_page_type, 'compare' => 'like'];
+    if($param_industry != '') $meta_query[] = ['key' => 'industry', 'value' => $param_industry, 'compare' => 'like'];
+    if($param_metric != '') $meta_query[] = ['key' => 'metric', 'value' => $param_metric, 'compare' => 'like'];
   
-    if($sort_key == 'post_modified') {
+    if($sort_key == 'publish_date') {
       $args['orderby'] = $sort_key;
       unset($args['meta_key']);
     }

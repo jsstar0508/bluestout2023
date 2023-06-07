@@ -18,10 +18,10 @@
           $html = '
             <div class="card-item">
               <div class="card-head">
-                <a href="#card_board_'.$index.'" class="md-content '.($index == 0 ? '' : 'collapsed').'" data-bs-toggle="collapse">'.$title.'</a>
+                <a href="#card_board_'.$index.'" class="md-content '.($index == -1 ? '' : 'collapsed').'" data-bs-toggle="collapse">'.$title.'</a>
               </div>
-              <div id="card_board_'.$index.'" class="collapse '.($index == 0 ? 'show' : '').'" data-bs-parent="#faq">
-                <div class="card-board"><p class="smd-content">'.$text.'</p></div>
+              <div id="card_board_'.$index.'" class="collapse '.($index == -1 ? 'show' : '').'" data-bs-parent="#faq">
+                <div class="card-board"><div class="smd-content card-board-content">'.$text.'</div></div>
               </div>
             </div>
           ';

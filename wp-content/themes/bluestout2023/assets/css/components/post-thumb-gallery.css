@@ -69,6 +69,7 @@
 
 .post-thumb-gallery .post-thumb-item .top .small-title{
   margin-left: 5px;
+  text-transform: uppercase;
 }
 
 .post-thumb-gallery .post-thumb-item .bottom {
@@ -135,6 +136,9 @@
   }
   .post-thumb-gallery .title {
     margin-left: 5px;
+  }
+  .post-thumb-gallery .post-list.mobile {
+    margin-right: -20px;
   }
 }
 

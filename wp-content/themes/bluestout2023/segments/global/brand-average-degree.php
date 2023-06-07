@@ -36,10 +36,10 @@
 <section class="brand-average-degree">
     <div class="brand-average-degree-inner">
         <div class="row <?=$top_bar_class?>">
-					<div class="col-6 down-bar"></div>
+            <div class="col-6 down-bar"></div>
         </div>
         <div class="text-center">
-					<h3 class="title xg-content"><?=$brand_average_degree_text?></h3>
+            <p class="title xg-content"><?=$brand_average_degree_text?></p>
         </div>
         <div class="degree-values">
             <div class="row">

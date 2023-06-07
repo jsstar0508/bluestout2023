@@ -23,7 +23,7 @@
             if($index >= 5) continue;
             $html = '
               <div class="gallery-item">
-                <img src="'.$logo['image'].'">
+                <img src="'.$logo['image'].'" alt="'.get_image_alt_from_image_url($logo['image']).'">
               </div>
             ';
             echo $html;
@@ -37,7 +37,7 @@
               $html .= '
                 <div class="col-4">
                   <div class="gallery-item">
-                  <img src="'.$logo['image'].'">
+                  <img src="'.$logo['image'].'" alt="'.get_image_alt_from_image_url($logo['image']).'">
                   </div>
                 </div>
               ';

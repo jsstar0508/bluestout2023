@@ -23,7 +23,7 @@
       $html .= '
         <div class="gallery-item">
           <div class="value fadeCount">'.
-          ($value_image == '' ? ('<div class="sm-title blue-color">'.$value_prefix.'<span class="countme">'.$num_value.'</span>'.$value_suffix.'</div>') : ('<img src="'.$value_image.'">'))
+          ($value_image == '' ? ('<div class="sm-title blue-color">'.$value_prefix.'<span class="countme">'.$num_value.'</span>'.$value_suffix.'</div>') : ('<img src="'.$value_image.'" alt="'.get_image_alt_from_image_url($value_image).'">'))
           .'</div>
           <div class="content">
             <p class="lg-content">'.$content.'</p>

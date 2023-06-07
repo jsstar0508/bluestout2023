@@ -6,7 +6,7 @@
 <section id="trusted_parter">
   <div class="trusted-parter-inner">
     <div class="section-title">
-      <p class="md-content">Trusted Parter of <img src="<?=bloginfo('template_url');?>/assets/img/logo/logo-shopify-dark.png"></p>
+      <p class="md-content">Trusted Parter of <img src="<?=bloginfo('template_url');?>/assets/img/logo/logo-shopify-dark.png" alt="shopify-dark-logo"></p>
     </div>
     <div class="description">
       <p class="gray-color"><?=$trusted_parter_description?></p>
@@ -23,7 +23,7 @@
               <div class="gallery-item">
                 <div class="image" style="background-image: url('.$image.')">
                   <div class="image-logo">
-                    <img src="'.$logo.'"/>
+                    <img src="'.$logo.'" alt="'.get_image_alt_from_image_url($logo).'"/>
                   </div>
                 </div>
                 <div class="title md-content text-center">
@@ -49,7 +49,7 @@
                 <div class="prepare-cover"></div>
                 <div class="image" style="background-image: url('.$image.')">
                   <div class="image-logo">
-                    <img src="'.$logo.'"/>
+                  <img src="'.$logo.'" alt="'.get_image_alt_from_image_url($logo).'"/>
                   </div>
                 </div>
                 <div class="title md-content text-center">

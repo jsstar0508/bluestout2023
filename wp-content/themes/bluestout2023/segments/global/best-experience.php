@@ -20,7 +20,7 @@
             </div>
             <div class="bottom">
                 <div>
-                    <img src="<?=$best_experience_icon?>" alt="<?=$best_experience_icon?>"/>
+                    <img src="<?=$best_experience_icon?>" alt="<?=get_image_alt_from_image_url($best_experience_icon)?>"/>
                 </div>
                 <div class="seperator">
 

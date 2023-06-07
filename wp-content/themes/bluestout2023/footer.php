@@ -50,22 +50,21 @@
                   if($index + 1 == count($footer_menu_list)) {
                     echo '<div class="social-links d-flex d-none d-lg-flex">';
                   ?>
-                    <a target="blank" href="https://www.instagram.com/"> <? get_template_part('assets/img/logo/instagram') ?> </a>
-                    <a target="blank" href="https://www.twitter.com/"> <? get_template_part('assets/img/logo/twitter') ?> </a>
-                    <a target="blank" href="https://www.linkedin.com"> <? get_template_part('assets/img/logo/linkedin') ?> </a>
+                    <a target="blank" href="https://www.instagram.com/blue.stout/" data-c="instagram" aria-label="instagram"> <? get_template_part('assets/img/logo/instagram') ?> </a>
+                    <a target="blank" href="https://www.twitter.com/allenburt/" data-c="twitter" aria-label="twitter"> <? get_template_part('assets/img/logo/twitter') ?> </a>
+                    <a target="blank" href="https://www.linkedin.com/in/allenburt/" data-c="linkedin" aria-label="linkedin"> <? get_template_part('assets/img/logo/linkedin') ?> </a>
                   <?
                     echo '</div>';
                   }
                   echo '</div>';
-                  echo $html;
                 }
               ?>
             </div>
             <div>
               <div class="social-links d-flex justify-content-center d-sm-flex d-lg-none">
-                <a target="blank" href="https://www.instagram.com/"> <? get_template_part('assets/img/logo/instagram') ?> </a>
-                <a target="blank" href="https://www.twitter.com/"> <? get_template_part('assets/img/logo/twitter') ?> </a>
-                <a target="blank" href="https://www.linkedin.com"> <? get_template_part('assets/img/logo/linkedin') ?> </a>
+                <a target="blank" href="https://www.instagram.com/blue.stout/" data-c="instagram" aria-label="instagram"> <? get_template_part('assets/img/logo/instagram') ?> </a>
+                <a target="blank" href="https://www.twitter.com/allenburt/" data-c="twitter" aria-label="twitter"> <? get_template_part('assets/img/logo/twitter') ?> </a>
+                <a target="blank" href="https://www.linkedin.com/in/allenburt/" data-c="linkedin" aria-label="linkedin"> <? get_template_part('assets/img/logo/linkedin') ?> </a>
               </div>
               <div class="copyright xxs-content">
                 <p class="">
@@ -79,6 +78,10 @@
     </div>
 	</div>
 </footer>
+
+<script>
+  var theme_directory_uri = "<?=get_template_directory_uri()?>";
+</script>
 
 <? wp_footer(); ?>
 

@@ -1,6 +1,8 @@
 #home #hero {
   margin-top: 30px;
-  height: 840px;
+  height: calc(100vh - 30px);
+  max-height: calc(1080px - 30px);
+  min-height: 700px;
   background: #3B3B3B no-repeat top center;
   background-size: cover;
   color: white;
@@ -15,6 +17,14 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(148deg, rgba(77, 189, 255, 0.75) 26.86%, rgba(0, 144, 240, 0.75) 100.95%);
+}
+
+#home #hero *::selection {
+  background-color: #2b7df873 !important;
+}
+
+#home #hero *::-moz-selection {
+  background-color: #2b7df873 !important;
 }
 
 #home #hero .hero-main {
@@ -76,7 +86,11 @@
 }
 
 #home #hero .hero-content .title a, #home #hero .hero-content .title span, .underline {
-  text-decoration-thickness: 1px !important;
+  text-decoration: none !important;
+  background-position: 0 100%;
+  background-size: auto 4px;
+  background-repeat: repeat-x;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}%3C/style%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 }
 
 #home #hero .hero-content .title a {
@@ -117,28 +131,33 @@
 }
 
 #home #hero .gform_wrapper .input-email input {
-  padding: 10px !important;
+  padding: 10px 0px !important;
   border: none !important;
   border-bottom: 2px solid white !important;
   background: none !important;
   width: 278px !important;
   max-width: 578px !important;
-  font-size: 16px !important;
   color: white !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
 }
 
 #home #hero .gform_wrapper input[type='submit'] {
-  padding: 13px 25px !important;
+  padding: 13px 19px 13px 21px !important;
   border: 2px solid white !important;
   border-radius: 5px !important;
   color: white !important;
   background: transparent !important;
   font-weight: 500 !important;
   font-size: 14px !important;
-  letter-spacing: 0px !important;
+  letter-spacing: 1.4px !important;
 }
 
-#home #hero .gform_wrapper input[type='submit']:hover {
+#home #hero .gform_wrapper input[type='submit'][disabled] {
+  cursor: default;
+}
+
+#home #hero .gform_wrapper input[type='submit']:not([disabled]):hover {
   background: white !important;
   color: #2ea5ef !important;
   border: 2px solid #0488d9 !important;
@@ -288,7 +307,16 @@
   text-decoration-thickness: 1px;
 }
 
+#home .message-popup {
+  width: 600px;
+  padding: 10px 20px;
+}
+
 @media (max-width: 1199px) {
+  #home #hero {
+    min-height: 630px;
+  }
+
   #home #hero .hero-content .title {
     width: 83%;
   }
@@ -377,12 +405,6 @@
     margin-left: 0px;
     margin-top: 24px;
   }
-  #home #hero .btn-book-call {
-    display: block;
-    width: 100%;
-    margin-left: 40px;
-    margin-right: 40px;
-  }
   #home #hero .trusted-text-wrapper {
     bottom: 36px;
     left: calc(50% - 110px);
@@ -441,5 +463,18 @@
     background-position: 0px 100%;
     background-size: auto 3px;
   }
+
+  #home .message-popup {
+    left: 10%;
+    width: 100%;
+  }
 }
 
+@media (max-width: 575px) {
+  #home #hero .btn-book-call {
+    display: block;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}

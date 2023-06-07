@@ -36,7 +36,7 @@
                         <div class="box-header-item">
                             <div class="value fadeCount">
                                 <?=$conversion_rate_value_prefix?><span class="countme"><?=$conversion_rate_value?></span><?=$conversion_rate_value_suffix?>
-                                <img src="<?=bloginfo('template_url');?>/assets/img/arrow-up.png"/>
+                                <img src="<?=bloginfo('template_url');?>/assets/img/arrow-up.png" alt="arrow-up"/>
                             </div>
                             <div class="description">
                                 <p class="md-content">Increase In Conversions</p>
@@ -45,7 +45,7 @@
                         <div class="box-header-item">
                             <div class="value fadeCount">
                                 <?=$revenue_value_prefix?><span class="countme"><?=$revenue_value?></span><?=$revenue_value_suffix?>
-                                <img src="<?=bloginfo('template_url');?>/assets/img/arrow-up.png"/>
+                                <img src="<?=bloginfo('template_url');?>/assets/img/arrow-up.png" alt="arrow-up"/>
                             </div>
                             <div class="description">
                                 <p class="md-content">Increase in YOY Revenue</p>
@@ -53,14 +53,14 @@
                         </div>
                     </div>
                     <div class="quote-mark">
-                        <img src="<?=bloginfo('template_url');?>/assets/img/quote.png">
+                        <img src="<?=bloginfo('template_url');?>/assets/img/quote.png" alt="quote">
                     </div>
                     <div class="content smd-content">
                         <?=$review1_text?>
                     </div>
                     <div class="bottom">
                         <div>
-                            <img src="<?=$review1_logo?>"/>
+                            <img src="<?=$review1_logo?>" alt="<?=get_image_alt_from_image_url($review1_logo)?>"/>
                         </div>
                         <div class="seperator">
 
@@ -84,14 +84,14 @@
                         <h2 class="sm-title"><?=$review2_title?></h2>
                     </div>
                     <div class="quote-mark">
-                        <img src="<?=bloginfo('template_url');?>/assets/img/quote.png">
+                        <img src="<?=bloginfo('template_url');?>/assets/img/quote.png" alt="quote">
                     </div>
                     <div class="content smd-content">
                         <?=$review2_text?>
                     </div>
                     <div class="bottom">
                         <div>
-                            <img src="<?=$review2_logo?>"/>
+                            <img src="<?=$review2_logo?>" alt="<?=get_image_alt_from_image_url($review2_logo)?>"/>
                         </div>
                         <div class="seperator">
 

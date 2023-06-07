@@ -15,7 +15,7 @@
         <p class="xg-content"><?=$text?></p>
       </div>
     <? } ?>
-    <div class="post-list desktop d-none d-md-flex">
+    <div class="post-list desktop d-none d-md-block">
       <div class="row">
         <? foreach ($post_list as $index => $post) {
           $post_id = $post->ID;
@@ -31,7 +31,7 @@
           }
           $post_small_title = isset($post_meta['gallery_small_title'][0]) ? $post_meta['gallery_small_title'][0] : '';
           $post_big_title = isset($post_meta['gallery_big_title'][0]) ? $post_meta['gallery_big_title'][0] : '';
-          $post_photo_url = wp_get_attachment_url($post_photo_id);
+          $post_photo_url = adjust_photo(wp_get_attachment_url($post_photo_id));
           $add_class = 'fadeInBottom-' . ($index % 3 + 1);
         ?>
           <div class="col-md-4">

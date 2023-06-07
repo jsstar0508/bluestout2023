@@ -1,0 +1,5 @@
+off,from_url_1,redirect_to_url
+301,from_url_2,1
+302,from_url_3,redirect_to_url
+307,from_url_3,redirect_to_url
+404,from_url_4,2

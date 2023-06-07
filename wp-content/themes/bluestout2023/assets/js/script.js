@@ -18,8 +18,26 @@ $(function() {
       $(document).scrollTop($(document).height());
     });
   
-    $('select:not(.ignore)').niceSelect();      
+    $('select:not(.ignore)').niceSelect();
     FastClick.attach(document.body);
+
+    $( document ).bind( 'gform_post_render', '.gform_wrapper form', function( event ) {
+      setTimeout(() => {
+        stopWaitMe('body');
+        if($("#gform_confirmation_message_3 .message-popup").length) {
+          $("#gform_confirmation_message_3 .message-popup").addClass("in-view");
+        }
+      }, 500);
+    });
+
+    $(document).on('submit', '.gform_wrapper form', function(e) {
+      $(this).find('.gform_ajax_spinner').hide();
+      startWaiteMe('body');
+    });
+
+    $(document).on('click', '.message-popup .btn-popup-close', function(e) {
+      $(this).closest('.message-popup').remove();
+    });
   }
 
   function fadeIn(selector, callTime = 100){
@@ -212,6 +230,8 @@ $(function() {
       let category_id = $(this).attr('data-category-id');
       let paged = 1;
       
+      if(category_id == -2) return;
+
       $('#blog_home .category-list .category-button').removeClass('active');
       $(this).addClass('active');
 
@@ -226,13 +246,22 @@ $(function() {
       let category_id = $(this).attr('data-category-id');
       loadBlogs(category_id, paged);
     });
+
+    $("#blog_home #post_gallery .category-list .category-list-inner.mobile").slick({
+      dots: false,
+      arrows: false,
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      variableWidth: true,
+    });
   }
 
   function initVideoPlayer() {
     let videos = $('.video');
     for(let i=0; i<videos.length; i++) {
-      let player = $(videos[i]).find(".btn-video-play");
-      let url = $(player).attr('src');
+      let player = $(videos[i]).find(".video-hover-layout");
+      let url = $(player).find('.btn-video-play').attr('src');
 
       $(player).modalVideo({
         youtube:{
@@ -388,12 +417,13 @@ $(function() {
       let itemMaxWidth = $(slideme).attr("slide-max-width");
       let slidesToShow = $(slideme).attr("slide-to-show");
       let dynamicSlidesToShow = 0;
-      if(slidesToShow === undefined) {
+      if(slidesToShow == undefined) {
         let parentWidth = $(slideme).parent().width();
         let showCount = parentWidth / (parseInt(itemMaxWidth) + 15);
         dynamicSlidesToShow = Math.max(1, showCount);
       }
 
+      console.log($(slideme).parent().width());
       var slick = $(slideme).slick({
         dots: true,
         arrows: false,

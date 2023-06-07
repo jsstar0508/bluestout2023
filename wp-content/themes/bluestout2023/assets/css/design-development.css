@@ -155,14 +155,16 @@
   padding-top: 10px;
 }
 
+#design_development #description_cards .card-item .card-board a {
+  padding-right: 50px;
+  color: #10A4FA;
+}
+
 #design_development #description_cards .shopify-require {
   padding-top: 30px;
   font-weight: 400;
   margin-left: -10px;
 }
-
-
-
 
 @media (max-width: 1199px) {
   #design_development #trusted_parter .trusted-parter-inner .gallery-item .image {

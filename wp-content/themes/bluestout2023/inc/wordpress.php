@@ -42,12 +42,23 @@ add_filter ( 'the_content' , function($content) {
   $content = str_replace('</h2>', '</h3>', $content);
   $content = str_replace('<h1', '<h2', $content);
   $content = str_replace('</h1>', '</h2>', $content);
+  $content = str_replace('/\u2028/', ' ', $content);
   return  $content;  
 });
 
 function get_full_url($url) {
   if(str_starts_with( $url, 'http://') || str_starts_with( $url, 'https://' )) return $url;
     return home_url($url);
+}
+
+function get_image_alt_from_image_id($iamge_id) {
+  $title = get_the_title($iamge_id);
+  return $title;
+}
+
+function get_image_alt_from_image_url($image_url) {
+  $image_id = attachment_url_to_postid($image_url);
+  return get_image_alt_from_image_id($image_id);
 }
 
 function adjust_text($text, $max_len, $request = true) {
@@ -87,3 +98,27 @@ function get_master_data($post_type) {
 
 add_filter( 'gform_confirmation_anchor', '__return_false' );
 add_filter( 'gform_error_anchor', '__return_false' );
+
+
+add_filter( 'gform_pre_submission_filter_3', 'dw_show_confirmation_and_form' );
+function dw_show_confirmation_and_form( $form ) {
+    $confirmation_pattern = '<div class="message-popup fadeInBottom">
+      <div class="main-content">
+        <div class="icon"><img src="'.get_template_directory_uri().'/assets/img/mail-logo.svg" alt="mail-logo"></div>
+        <div class="content">
+          <div class="confirm-message">%msg</div>
+        </div>
+      </div>
+    </div>';
+
+    // Inserts the form before the confirmation message
+    if ( array_key_exists( 'confirmations', $form ) ) {
+      foreach ( $form['confirmations'] as $key => $confirmation ) {
+        $msg = $form['confirmations'][ $key ]['message'];
+        $msg = str_replace('!', '!<br>', $form['confirmations'][ $key ]['message']);
+        $form['confirmations'][ $key ]['message'] = str_replace(array("\r","\n"),'', str_replace('%msg', $msg, $confirmation_pattern));
+      }
+    }
+
+    return $form;
+}

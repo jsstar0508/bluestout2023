@@ -13,14 +13,14 @@
                 <h2 class="sm-title"><?=$exceed_agency_relationship_title?></h2>
             </div>
             <div class="quote-mark">
-                <img src="<?=bloginfo('template_url');?>/assets/img/quote.png">
+                <img src="<?=bloginfo('template_url');?>/assets/img/quote.png" alt="quote">
             </div>
             <div class="content lg-content">
                 <?=$exceed_agency_relationship_text?>
             </div>
             <div class="bottom">
                 <div>
-                    <img src="<?=$exceed_agency_relationship_logo?>"/>
+                    <img src="<?=$exceed_agency_relationship_logo?>"/ alt="<?=get_image_alt_from_image_url($exceed_agency_relationship_logo)?>">
                 </div>
                 <div class="seperator">
 

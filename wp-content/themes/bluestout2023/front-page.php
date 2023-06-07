@@ -12,7 +12,7 @@ get_template_part('segments/front-page/increase-rate');
 get_template_part('segments/front-page/combine-design-developer');
 get_template_part('segments/global/brand-average-degree');
 get_template_part('segments/global/cro-winners');
-get_template_part('segments/global/case-studies');
+get_template_part('segments/front-page/case-studies');
 get_template_part('segments/global/return-on-investment');
 get_template_part('segments/front-page/ripple-background', null, ['type' => 'right']);
 get_template_part('segments/global/how-different');

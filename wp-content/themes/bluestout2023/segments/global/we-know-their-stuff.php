@@ -20,7 +20,7 @@
             </div>
             <div class="bottom">
                 <div>
-                    <img src="<?=$we_know_their_stuff_logo?>" alt="<?=$we_know_their_stuff_logo?>" />
+                    <img src="<?=$we_know_their_stuff_logo?>" alt="<?=get_image_alt_from_image_url($we_know_their_stuff_logo)?>" />
                 </div>
                 <div class="seperator">
 

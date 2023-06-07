@@ -16,7 +16,7 @@
             $html = '
             <div class="fadeInBottom col-4 col-sm-4 '.($index >= 14 ? 'd-lg-none' : 'col-md-7ths').'">
               <div class="brand-item text-center d-flex justify-content-center">
-                  <img src="'.$image['image'].'" alt="'.$image['image'].'">
+                  <img src="'.$image['image'].'" alt="'.get_image_alt_from_image_url($image['image']).'">
               </div>
             </div>
             ';

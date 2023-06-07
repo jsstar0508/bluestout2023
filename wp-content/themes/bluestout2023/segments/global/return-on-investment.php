@@ -20,7 +20,7 @@
             </div>
             <div class="bottom">
                 <div>
-                    <img src="<?=$return_on_investment_icon?>" alt=<?=$return_on_investment_icon?>/>
+                    <img src="<?=$return_on_investment_icon?>" alt=<?=get_image_alt_from_image_url($return_on_investment_icon)?>/>
                 </div>
                 <div class="seperator">
 

@@ -15,7 +15,7 @@
             $image = $gallery_item['image'];
             $html = '
               <div class="gallery-item">
-                <img src="'.$image.'"/>
+                <img src="'.$image.'"/ alt="'.get_image_alt_from_image_url($image).'">
               </div>
             ';
 

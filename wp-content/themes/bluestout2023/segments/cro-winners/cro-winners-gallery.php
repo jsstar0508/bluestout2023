@@ -23,11 +23,11 @@
   ];
 
   $meta_query = ['relation' => 'AND'];
-  if($param_page_type != '') $meta_query[] = ['key' => 'page_type', 'value' => $param_page_type];
-  if($param_industry != '') $meta_query[] = ['key' => 'industry', 'value' => $param_industry];
-  if($param_metric != '') $meta_query[] = ['key' => 'metric', 'value' => $param_metric];
+  if($param_page_type != '') $meta_query[] = ['key' => 'page_type', 'value' => $param_page_type, 'compare' => 'like'];
+  if($param_industry != '') $meta_query[] = ['key' => 'industry', 'value' => $param_industry, 'compare' => 'like'];
+  if($param_metric != '') $meta_query[] = ['key' => 'metric', 'value' => $param_metric, 'compare' => 'like'];
 
-  if($sort_key == 'post_modified') {
+  if($sort_key == 'publish_date') {
     $args['orderby'] = $sort_key;
     unset($args['meta_key']);
   }
@@ -78,7 +78,7 @@
         <div class="mobile-land-menu">
           <div class="mobile-land-menu-inner">
             <div class="mobile-land-menu-content">
-              <div class="menu-close"><span href="javascript:;" class="hover-point btn-menu-close"><img src="<?=bloginfo('template_url');?>/assets/img/close.png"/></span></div>
+              <div class="menu-close"><span href="javascript:;" class="hover-point btn-menu-close"><img src="<?=bloginfo('template_url');?>/assets/img/close.png" alt="close"/></span></div>
               <div class="menu-title">
                   <span>PAGE TYPE</span>
               </div>
@@ -99,7 +99,7 @@
         <div class="mobile-land-menu">
           <div class="mobile-land-menu-inner">
             <div class="mobile-land-menu-content">
-              <div class="menu-close"><span href="javascript:;" class="hover-point btn-menu-close"><img src="<?=bloginfo('template_url');?>/assets/img/close.png"/></span></div>
+              <div class="menu-close"><span href="javascript:;" class="hover-point btn-menu-close"><img src="<?=bloginfo('template_url');?>/assets/img/close.png" alt="close"/></span></div>
               <div class="menu-title">
                   <span>PAGE TYPE</span>
               </div>
@@ -120,7 +120,7 @@
         <div class="mobile-land-menu">
           <div class="mobile-land-menu-inner">
             <div class="mobile-land-menu-content">
-              <div class="menu-close"><span href="javascript:;" class="hover-point btn-menu-close"><img src="<?=bloginfo('template_url');?>/assets/img/close.png"/></span></div>
+              <div class="menu-close"><span href="javascript:;" class="hover-point btn-menu-close"><img src="<?=bloginfo('template_url');?>/assets/img/close.png" alt="close"/></span></div>
               <div class="menu-title">
                   <span>PAGE TYPE</span>
               </div>

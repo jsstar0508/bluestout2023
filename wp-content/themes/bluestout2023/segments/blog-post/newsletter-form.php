@@ -35,14 +35,14 @@
           <div class="brand-gallery-item read-by smd-content">Read by</div>
           <? foreach ($blog_newsletter_form_brands_gallery as $brand_item) { ?>
             <div class="brand-gallery-item">
-              <img src="<?=$brand_item['image']?>" alt="<?=$brand_item['image']?>">
+              <img src="<?=$brand_item['image']?>" alt="<?=get_image_alt_from_image_url($brand_item['image'])?>">
             </div>
           <? } ?>
         <? } else { ?>
           <? foreach ($blog_newsletter_form_brands_gallery as $index => $brand_item) { ?>
             <? if($index % 3 == 0) echo '<div class="brand-gallery-row" style="justify-content: '.(($index + 3 > $brands_count) ? 'space-around' : 'space-between').'">'; ?>
               <div class="brand-gallery-item">
-                <img src="<?=$brand_item['image']?>" alt="<?=$brand_item['image']?>">
+                <img src="<?=$brand_item['image']?>" alt="<?=get_image_alt_from_image_url($brand_item['image'])?>">
               </div>
             <? if($index % 3 == 2 || $index == $brands_count - 1) echo '</div>'; ?>
           <? } ?>

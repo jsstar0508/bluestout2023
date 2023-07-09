@@ -1,0 +1,22 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.editor-block-list__block-edit .wp-block-davidfcarr-marginalia {
+  border: thin solid yellow; }
+
+.warnifnested {
+  display: none; }
+
+.wp-block-davidfcarr-marginalia .wp-block-davidfcarr-marginalia .warnifnested {
+  display: block;
+  color: red;
+  font-weight: bold; }
+
+.marginaliaNote {
+  border: thin solid #eee; }
+
+.marginaliaMain {
+  margin-top: -5em; }

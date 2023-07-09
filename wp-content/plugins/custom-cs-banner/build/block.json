@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "customcsbanner/custom-cs-banner",
+  "version": "0.1.0",
+  "title": "Custom CS Banner",
+  "category": "widgets",
+  "icon": "megaphone",
+  "description": "Block for Case Studies banner of bluestout.com",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title_1": {
+      "type": "string",
+      "source": "html",
+      "selector": ".d-title-1"
+    },
+    "content_1": {
+      "type": "string",
+      "source": "html",
+      "selector": ".d-content-1"
+    },
+    "title_2": {
+      "type": "string",
+      "source": "html",
+      "selector": ".d-title-2"
+    },
+    "content_2": {
+      "type": "string",
+      "source": "html",
+      "selector": ".d-content-2"
+    },
+    "title_3": {
+      "type": "string",
+      "source": "html",
+      "selector": ".d-title-3"
+    },
+    "content_3": {
+      "type": "string",
+      "source": "html",
+      "selector": ".d-content-3"
+    }
+  },
+  "textdomain": "custom-cs-banner",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

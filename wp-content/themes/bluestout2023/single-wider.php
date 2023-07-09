@@ -12,6 +12,15 @@ $redirect_url = '';
 $category_name = '';
 $category_id = '';
 $category_slug = '';
+$colored_title = get_field('colored_title');
+
+if(!empty($colored_title)) {
+  if(strpos($colored_title, '<p>') !== false) {
+      $colored_title = str_replace('<p>', ' ', $colored_title);
+      $colored_title = str_replace('</p>', '', $colored_title);
+  }
+  $colored_title = trim($colored_title);
+}
 
 foreach ($categories as $cat_item) {
   $category = get_category($cat_item);
@@ -33,34 +42,36 @@ foreach ($categories as $cat_item) {
 ?>
 
 <div class="page-hero fluid-padding">
-  <div class="container">
-    <div class="main-content">
-      <article class="article">
-        <div class="breadcrumb">
-          <ul class="breadmenu">
-            <li class="breadcrumb-item all"><a href="<?=get_full_url('blog')?>"><img src="<?=bloginfo('template_url');?>/assets/img/gray-prev.png"></a></li>
-            <li class="breadcrumb-item"><a href="<?=$redirect_url?>"><?=$category_name?></a></li>
-          </ul>
-          <div class="category">
-              <? foreach ($cat_names as $category_name) { ?>
-                <span class="mini-border-radius category-sign xxs-content"><?=strtoupper($category_name)?></span>
-              <? } ?>
-            <span class="category-sign"><?=$category_sign?></span>
-          </div>
+    <div class="container">
+        <div class="main-content">
+            <article class="article">
+                <div class="breadcrumb">
+                    <ul class="breadmenu">
+                        <li class="breadcrumb-item all"><a href="<?=get_full_url('blog')?>"><img
+                                    src="<?=bloginfo('template_url');?>/assets/img/gray-prev.png"></a></li>
+                        <li class="breadcrumb-item"><a href="<?=$redirect_url?>"><?=$category_name?></a></li>
+                    </ul>
+                    <div class="category">
+                        <? foreach ($cat_names as $category_name) { ?>
+                        <span
+                            class="mini-border-radius category-sign xxs-content"><?=strtoupper($category_name)?></span>
+                        <? } ?>
+                        <span class="category-sign"><?=$category_sign?></span>
+                    </div>
+                </div>
+                <h1 class="title sm-title title-font">
+                    <? echo empty($colored_title) ? the_title() : $colored_title; ?>
+                </h1>
+                <div class="content">
+                    <? the_content(); ?>
+                </div>
+                <? get_template_part('segments/blog-post/quote'); ?>
+            </article>
         </div>
-        <h1 class="title sm-title title-font">
-          <? the_title(); ?>
-        </h1>
-        <div class="content">
-          <? the_content(); ?>
-        </div>
-        <? get_template_part('segments/blog-post/quote'); ?>
-      </article>
     </div>
-  </div>
-  <? get_template_part('segments/blog-post/continue-learning'); ?>
-  <? get_template_part('segments/blog-post/newsletter-form', null, ['type' => 'footer', 'class' => 'd-none d-md-block']); ?>
-  <? get_template_part('segments/blog-post/newsletter-form', null, ['type' => 'sidebar', 'class' => 'd-sm-block d-md-none']); ?>
+    <? get_template_part('segments/blog-post/continue-learning'); ?>
+    <? get_template_part('segments/blog-post/newsletter-form', null, ['type' => 'footer', 'class' => 'd-none d-md-block']); ?>
+    <? get_template_part('segments/blog-post/newsletter-form', null, ['type' => 'sidebar', 'class' => 'd-sm-block d-md-none']); ?>
 </div>
 
 <? get_footer();

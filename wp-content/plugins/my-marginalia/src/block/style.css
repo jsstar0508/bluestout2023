@@ -1,0 +1,12 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-davidfcarr-marginalia {
+  clear: both;
+  border-bottom: thin dotted #AAA;
+  margin-bottom: 5px; }
+
+.marginaliaMain h1, .marginaliaMain h2, .marginaliaMain h3, .marginaliaMain h4, .marginaliaMain h5 {
+  clear: none; }
